@@ -57,7 +57,7 @@ export const SETTINGS_NS = settingsNamespace('llm-autorouter')
 /** Credential-reference default; store the token under this name (web Models page / credentials service) or export it. */
 export const DEFAULT_API_KEY_ENV = 'AUTOROUTER_API_KEY'
 /** Default gateway origin; every deployment should override it. */
-export const DEFAULT_BASE_URL = 'http://127.0.0.1:3000'
+export const DEFAULT_BASE_URL = 'https://api.autorouter.top'
 /** Environment variable naming the gateway origin; read when `baseURL` config is absent. */
 const BASE_URL_ENV = 'AUTOROUTER_BASE_URL'
 
@@ -72,7 +72,7 @@ const BASE_URL_ENV = 'AUTOROUTER_BASE_URL'
 export interface Config {
   /** Credential reference (environment-variable name) resolved per request; defaults to `AUTOROUTER_API_KEY`. */
   apiKeyEnv?: string
-  /** Gateway origin WITHOUT a trailing slash or `/v1`; the adapter appends `/v1/chat/completions`. Falls back to $AUTOROUTER_BASE_URL, then `http://127.0.0.1:3000`. */
+  /** Gateway origin WITHOUT a trailing slash or `/v1`; the adapter appends `/v1/chat/completions`. Falls back to $AUTOROUTER_BASE_URL, then `https://api.autorouter.top`. */
   baseURL?: string
   /** Provider routes this adapter owns; defaults to `autorouter`. */
   providers?: string[]

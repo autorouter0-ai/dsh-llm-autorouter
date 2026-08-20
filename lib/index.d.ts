@@ -1,10 +1,8 @@
 import z from "@deepseek-ai/schemastery";
 import { GenerateOptions, LlmAdapter, LlmModelInfo, LlmProviderInfo, LlmResolvedModelInfo, ModelModality, ResolvedRetryPolicy, RetryPolicyConfig, StreamChunk } from "@deepseek-ai/dsh-llm";
 import { CredentialRef } from "@deepseek-ai/dsh-credentials";
-import * as _deepseek_ai_dsh_settings0 from "@deepseek-ai/dsh-settings";
 import { Context } from "@deepseek-ai/cordis";
 import { AttachmentStore } from "@deepseek-ai/dsh-attachment";
-
 //#region src/types.d.ts
 /**
  * AutoRouter relay wire format (OpenAI-compatible chat completions). Types only.
@@ -139,7 +137,9 @@ interface WireToolCallDelta {
   id?: string;
   type?: 'function';
   function?: {
-    /** Present on the first delta of each call only. */name?: string; /** Argument JSON fragment (concatenate across deltas). */
+    /** Present on the first delta of each call only. */
+    name?: string;
+    /** Argument JSON fragment (concatenate across deltas). */
     arguments?: string;
   };
 }
@@ -294,11 +294,11 @@ declare const inject: string[];
 /** The provider route this plugin owns by default. */
 declare const PROVIDER = "autorouter";
 /** Settings namespace shared by the Host and browser halves. */
-declare const SETTINGS_NS: _deepseek_ai_dsh_settings0.SettingsNamespace;
+declare const SETTINGS_NS: import("@deepseek-ai/dsh-settings").SettingsNamespace;
 /** Credential-reference default; store the token under this name (web Models page / credentials service) or export it. */
 declare const DEFAULT_API_KEY_ENV = "AUTOROUTER_API_KEY";
 /** Default gateway origin; every deployment should override it. */
-declare const DEFAULT_BASE_URL = "http://127.0.0.1:3000";
+declare const DEFAULT_BASE_URL = "https://api.autorouter.top";
 /**
  * Plugin config, validated by the same-named schemastery schema. Every field
  * is optional in yml: a missing API key resolves through
@@ -310,7 +310,7 @@ declare const DEFAULT_BASE_URL = "http://127.0.0.1:3000";
 interface Config {
   /** Credential reference (environment-variable name) resolved per request; defaults to `AUTOROUTER_API_KEY`. */
   apiKeyEnv?: string;
-  /** Gateway origin WITHOUT a trailing slash or `/v1`; the adapter appends `/v1/chat/completions`. Falls back to $AUTOROUTER_BASE_URL, then `http://127.0.0.1:3000`. */
+  /** Gateway origin WITHOUT a trailing slash or `/v1`; the adapter appends `/v1/chat/completions`. Falls back to $AUTOROUTER_BASE_URL, then `https://api.autorouter.top`. */
   baseURL?: string;
   /** Provider routes this adapter owns; defaults to `autorouter`. */
   providers?: string[];
@@ -340,4 +340,4 @@ declare const Config: z<Config>;
 declare function resolveAdapterOptions(config: Config): AutorouterConnectionOptions;
 declare function apply(ctx: Context, config: Config): void;
 //#endregion
-export { AutorouterAdapter, type AutorouterAdapterOptions, type AutorouterCatalogModel, type AutorouterConnectionOptions, CHAT_COMPLETIONS_PATH, Config, DEFAULT_API_KEY_ENV, DEFAULT_BASE_URL, DEFAULT_CONTEXT_WINDOW, DEFAULT_DISCOVERY_TIMEOUT_MS, DEFAULT_STREAM_IDLE_TIMEOUT_MS, MODELS_PATH, PROVIDER, type RequestDefaults, SETTINGS_NS, WireAssistantMessage, WireChoice, WireChunk, WireDelta, WireError, WireMessage, WireModelEntry, WireModelsResponse, WireRequest, WireSystemMessage, WireTool, WireToolCall, WireToolCallDelta, WireToolMessage, WireUsage, WireUserContentPart, WireUserMessage, apply, inject, name, resolveAdapterOptions };
+export { AutorouterAdapter, type AutorouterAdapterOptions, type AutorouterCatalogModel, type AutorouterConnectionOptions, CHAT_COMPLETIONS_PATH, Config, DEFAULT_API_KEY_ENV, DEFAULT_BASE_URL, DEFAULT_CONTEXT_WINDOW, DEFAULT_DISCOVERY_TIMEOUT_MS, DEFAULT_STREAM_IDLE_TIMEOUT_MS, MODELS_PATH, PROVIDER, type RequestDefaults, SETTINGS_NS, type WireAssistantMessage, type WireChoice, type WireChunk, type WireDelta, type WireError, type WireMessage, type WireModelEntry, type WireModelsResponse, type WireRequest, type WireSystemMessage, type WireTool, type WireToolCall, type WireToolCallDelta, type WireToolMessage, type WireUsage, type WireUserContentPart, type WireUserMessage, apply, inject, name, resolveAdapterOptions };

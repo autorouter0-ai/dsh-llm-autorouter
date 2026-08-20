@@ -19,7 +19,7 @@ import { en, zh, type LocaleKey } from './locales.ts'
 
 const SETTINGS_NS = 'llm-autorouter'
 const LOCALE_NS = 'llm-autorouter'
-const DEFAULT_BASE_URL = 'http://127.0.0.1:3000'
+const DEFAULT_BASE_URL = 'https://api.autorouter.top'
 const DEFAULT_API_KEY_ENV = 'AUTOROUTER_API_KEY'
 const UNLABELLED = 'unlabelled'
 

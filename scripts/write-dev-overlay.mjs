@@ -6,7 +6,7 @@ const here = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(here, '..')
 const entry = path.join(root, 'lib', 'index.js')
 const output = path.join(root, 'dev-cordis.local.yml')
-const baseURL = process.env.AUTOROUTER_BASE_URL ?? 'http://127.0.0.1:3000'
+const baseURL = process.env.AUTOROUTER_BASE_URL ?? 'https://api.autorouter.top'
 const apiKeyEnv = process.env.AUTOROUTER_API_KEY_ENV ?? 'AUTOROUTER_API_KEY'
 
 const yaml = `- insert:
