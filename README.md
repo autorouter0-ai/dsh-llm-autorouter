@@ -2,7 +2,7 @@
 
 [中文文档](README.zh-CN.md)
 
-DeepSeek Harness LLM adapter for **AutoRouter** — a model routing gateway that unifies access to multiple upstream channels. AutoRouter supports mainstream API formats (OpenAI-compatible, Anthropic, Gemini, and others) and handles routing, channel failover, billing, and observability inside the gateway.
+DeepSeek Harness LLM adapter for [**AutoRouter**](https://www.autorouter.top/l/re5gtro) — a model routing gateway that unifies access to multiple upstream channels. AutoRouter supports mainstream API formats (OpenAI-compatible, Anthropic, Gemini, and others) and handles routing, channel failover, billing, and observability inside the gateway.
 
 This plugin mounts on the Harness so every model call goes through your AutoRouter deployment instead of hitting providers directly. It registers one provider route (`autorouter` by default) on `ctx.llm`; first fetch and import the models exposed by the gateway, then use those imported model ids in your agent config.
 

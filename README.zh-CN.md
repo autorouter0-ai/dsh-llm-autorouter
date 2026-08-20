@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-DeepSeek Harness 的 **AutoRouter** LLM 适配器。AutoRouter 是模型路由网关，统一对接多种上游渠道，支持 OpenAI 兼容、Anthropic、Gemini 等主流协议，并在网关内完成路由、渠道 failover、计费与可观测性。
+DeepSeek Harness 的 [**AutoRouter**](https://www.autorouter.top/l/re5gtro) LLM 适配器。AutoRouter 是模型路由网关，统一对接多种上游渠道，支持 OpenAI 兼容、Anthropic、Gemini 等主流协议，并在网关内完成路由、渠道 failover、计费与可观测性。
 
 安装本插件后，Harness 的所有模型调用都会经由你的 AutoRouter 部署转发，而不是直连各厂商 API。插件在 `ctx.llm` 上注册一条 provider 路由（默认 `autorouter`）；先通过“获取模型”与“导入选中模型”把网关提供的模型导入进来，再在 agent 中使用这些导入后的 model id。
 
