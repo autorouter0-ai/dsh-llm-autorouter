@@ -1,0 +1,6 @@
+- insert:
+    - id: llm-autorouter
+      name: '/absolute/path/to/autorouter/plugins/dsh-llm-autorouter/lib/index.js'
+      config:
+        baseURL: http://127.0.0.1:3000
+        apiKeyEnv: AUTOROUTER_API_KEY

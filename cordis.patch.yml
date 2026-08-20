@@ -1,0 +1,12 @@
+# dsh-llm-autorouter bundle layer.
+#
+# Mounts the AutoRouter relay adapter on the `llm` service. No endpoint or key
+# is inlined here, following the dsh-base convention: `baseURL` and
+# `apiKeyEnv` resolve per request from the plugin config (schema defaults,
+# $AUTOROUTER_BASE_URL, the credentials service), and can be overridden by the
+# profile's own cordis.patch.yml or a `--patch` overlay without editing this
+# file. The agent-loop row that uses this provider must be patched separately
+# (see README.md "Usage").
+- insert:
+    - id: llm-autorouter
+      name: dsh-llm-autorouter
