@@ -20,7 +20,6 @@ const links = [
   ['node_modules/@deepseek-ai/dsh-client-ui-settings-plugins', path.join(harness, 'packages/client/ui-settings-plugins')],
   ['node_modules/@deepseek-ai/dsh-client-locale', path.join(harness, 'packages/client/locale')],
   ['node_modules/@deepseek-ai/dsh-client-ui-slots', path.join(harness, 'packages/client/ui-slots')],
-  ['node_modules/@deepseek-ai/dsh-client-web-react', path.join(harness, 'packages/client/web-react')],
   ['node_modules/@deepseek-ai/cordis', path.join(harness, 'vendor/cordis')],
   ['node_modules/@deepseek-ai/schemastery', path.join(harness, 'vendor/schemastery')],
   ['node_modules/@deepseek-ai/cordis-plugin-loader', path.join(harness, 'vendor/loader')],

@@ -8,7 +8,6 @@ const clientExternals = [
   '@deepseek-ai/dsh-client-ui-settings/client',
   '@deepseek-ai/dsh-client-ui-settings-plugins/client',
   '@deepseek-ai/dsh-client-locale/client',
-  '@deepseek-ai/dsh-client-web-react',
   'react',
   'react/jsx-runtime',
 ]
