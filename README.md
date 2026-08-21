@@ -10,7 +10,7 @@ Tested with DeepSeek Harness `0.1.0-rc.5`. Harness is still Developer Preview �
 
 ## Requirements
 
-- An AutoRouter API key.
+- An AutoRouter API key (generated in the [AutoRouter console](https://www.autorouter.top/l/re5gtro)).
 - A working DeepSeek Harness environment.
 
 ## Install
@@ -53,7 +53,7 @@ The bundle has two entries with one installation: the **Host** entry supplies th
 
 ### Web UI (recommended)
 
-After install, open the AutoRouter card under **Plugins**. Enter the gateway URL and API key. The key is stored only through the credentials service (`AUTOROUTER_API_KEY` by default) — never in `settings.yaml` or the browser.
+After install, open the AutoRouter card under **Plugins**. Enter the gateway URL `https://api.autorouter.top` and API key (generated in the AutoRouter console). The key is stored only through the credentials service (`AUTOROUTER_API_KEY` by default) — never in `settings.yaml` or the browser.
 
 Use **Fetch models** and **Import selected** to populate the `models` allowlist that chat selectors read from.
 
@@ -87,7 +87,7 @@ Example `cordis.patch.yml`:
     - id: llm-autorouter
       name: dsh-llm-autorouter
       config:
-        baseURL: https://gateway.example.com
+        baseURL: https://api.autorouter.top
         apiKeyEnv: AUTOROUTER_API_KEY
         thinking: enabled
         reasoningEffort: high

@@ -10,7 +10,7 @@ DeepSeek Harness 的 [**AutoRouter**](https://www.autorouter.top/l/re5gtro) LLM 
 
 ## 环境要求
 
-- AutoRouter API 密钥。
+- AutoRouter API 密钥（在 [AutoRouter 控制台](https://www.autorouter.top/l/re5gtro) 生成）。
 - 可用的 DeepSeek Harness 环境。
 
 ## 安装
@@ -53,7 +53,7 @@ npx @deepseek-ai/dsh plugin --profile web add ./dsh-llm-autorouter-0.1.0.tgz
 
 ### Web 界面（推荐）
 
-安装后打开 **Plugins** 中的 AutoRouter 卡片，填写网关地址与 API Key。Key 仅通过 credentials 服务存储（默认 `AUTOROUTER_API_KEY`），不会写入 `settings.yaml` 或返回浏览器。
+安装后打开 **Plugins** 中的 AutoRouter 卡片，填写网关地址 `https://api.autorouter.top` 与 API Key（从 AutoRouter 控制台生成）。Key 仅通过 credentials 服务存储（默认 `AUTOROUTER_API_KEY`），不会写入 `settings.yaml` 或返回浏览器。
 
 使用 **获取模型** 与 **导入选中模型** 填充 `models` 白名单，供聊天模型选择器读取。
 
@@ -87,7 +87,7 @@ npx @deepseek-ai/dsh plugin --profile web add ./dsh-llm-autorouter-0.1.0.tgz
     - id: llm-autorouter
       name: dsh-llm-autorouter
       config:
-        baseURL: https://gateway.example.com
+        baseURL: https://api.autorouter.top
         apiKeyEnv: AUTOROUTER_API_KEY
         thinking: enabled
         reasoningEffort: high
